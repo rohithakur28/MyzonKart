@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Us | Myzonkart</title>
+  <style media="screen">
+    .footer {
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+  {% if request.user.is_authenticated %}
+    {% include "ecom/customer_navbar.html" %}
+  {% else %}
+    {% include "ecom/navbar.html" %}
+  {% endif %}
+  <br><br><br>
+  <h3 style="text-align:center;"></h3>
+  <main>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Days+One&display=swap">
+    <style media="screen">
+      body {
+        font-family: 'Days One', sans-serif;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0;
+        background: #bdc3c7;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 64px;
+        margin: 40px; /* Adjust the top margin */
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 24px;
+        margin: 20px; /* Adjust the top margin */
+      }
+    </style>
+    <section id="about-us">
+      <div class="container">
+        <h1>About Us</h1>
+        <h4><b>Welcome to Myzonkart, your one-stop destination for all your online shopping needs. We are dedicated to providing you with a seamless and enjoyable shopping experience. At Myzonkart, we offer a wide range of high-quality products, from electronics and fashion to home decor and more. Our mission is to bring you the best selection of products at competitive prices. Our team of passionate professionals is committed to ensuring your satisfaction with every purchase. We strive to deliver your orders promptly and securely, and we're here to assist you with any questions or concerns you may have.</b></h4>
+        <h4><b>Thank you for choosing Myzonkart for your online shopping. We look forward to serving you and making your shopping journey memorable.</b></h4>
+      </div>
+    </section>
+  </main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+
+</html>
